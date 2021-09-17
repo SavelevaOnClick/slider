@@ -1,0 +1,66 @@
+.blue {
+  background: blue;
+  order: 1;
+}
+.orange {
+  background: orange;
+  order: 2;
+}
+.violet {
+  background: violet;
+  order: 3;
+}
+.pink {
+  background: pink;
+  order: 4;
+}
+.red {
+  background: red;
+  order: 5;
+}
+.lime {
+  background: lime;
+  order: 6;
+}
+.green {
+  background: green;
+  order: 7;
+}
+.grey {
+  background: grey;
+  order: 8;
+}
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+
+  position: relative;
+  padding-bottom: 50px;
+  left: 25px;
+}
+.slid {
+  flex-basis: 250px;
+  margin-right: 50px;
+  height: 250px;
+  flex-shrink: 0;
+}
+section {
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+#arrow-left {
+  position: absolute;
+  padding: 10px 15px;
+  bottom: -10px;
+  width: 400px;
+  left: 0;
+}
+#arrow-right {
+  right: 0;
+  position: absolute;
+  padding: 10px 15px;
+  bottom: -10px;
+  width: 400px;
+}
