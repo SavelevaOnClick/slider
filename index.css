@@ -1,3 +1,9 @@
+body,
+p {
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 .blue {
   background: blue;
   order: 1;
@@ -33,19 +39,18 @@
 .slider {
   display: flex;
   flex-wrap: nowrap;
-
+  padding: 4%;
   position: relative;
   padding-bottom: 50px;
-  left: 25px;
 }
 .slid {
-  flex-basis: 250px;
-  margin-right: 50px;
-  height: 250px;
+  /* flex-basis: 250px; */
+  margin-right: 4%;
+  /* height: 250px; */
   flex-shrink: 0;
 }
 section {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
