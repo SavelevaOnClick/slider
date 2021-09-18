@@ -22,16 +22,17 @@ function goToLeft() {
   });
 }
 function adaptiveWidthOfSlidMini(slidNumber) {
+  console.log(sliderSection.offsetWidth);
   slides.forEach((item) =>
     Object.assign(item.style, {
       flexBasis: `${
         (sliderSection.offsetWidth -
-          (sliderSection.offsetWidth / 100) * (slidNumber * 4 + 2)) /
+          (sliderSection.offsetWidth / 100) * (slidNumber * 4)) /
         slidNumber
       }px`,
       height: `${
         (sliderSection.offsetWidth -
-          (sliderSection.offsetWidth / 100) * (slidNumber * 4 + 2)) /
+          (sliderSection.offsetWidth / 100) * (slidNumber * 4)) /
         slidNumber
       }px`,
     })
@@ -39,10 +40,10 @@ function adaptiveWidthOfSlidMini(slidNumber) {
 }
 
 function createWidthAndHeight() {
-  adaptiveWidthOfSlidMini(innerWidth < 769 ? 2 : 4);
+  adaptiveWidthOfSlidMini(innerWidth < 426 ? 1 : innerWidth < 769 ? 2 : 4);
 }
 createWidthAndHeight();
 arrowRight.addEventListener("click", (event) => goToRight());
 arrowLeft.addEventListener("click", (event) => goToLeft());
 
-window.addEventListener("resize", createWidthAndHeight);
+window.addEventListener("resize", (event) => createWidthAndHeight());
